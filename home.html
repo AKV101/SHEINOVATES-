@@ -14,10 +14,10 @@
     </head>
     <body>
         <div class = "wrapper"> 
-            <p> The Begining of a New Asset Class<p>
+            <p> <p>
                 <h1>Dummies Guide to Fantasy Football</h1>
 
-                <div class = "faq" > 
+                <div class = "faq.active" > 
                   <button class = "accordian">  
                     What is Fantasy football?
                     <i class = "fa-solid fa-chevron-down" ></i>
@@ -32,7 +32,7 @@
                   </div>
                 </div>
 
-                <div class = "faq" > 
+                <div class = "faq.active" > 
                     <button class = "accordian">  
                       What is our website doing?
                     </button>  
@@ -47,7 +47,7 @@
                     </div>
                   </div>
 
-                <div class = "faq" > 
+                <div class = "faq.active" > 
                     <button class = "accordian">  
                       How do I download fantasy football?
                     </button>  
@@ -60,7 +60,7 @@
                     </div>
                   </div>
 
-                <div class = "faq" > 
+                <div class = "faq.active" > 
                     <button class = "accordian">  
                       How many people are in a draft?
                     </button>  
@@ -89,7 +89,7 @@
                     </div>
                 </div>
 
-                <div class = "faq" > 
+                <div class = "faq.active" > 
                     <button class = "accordian">  
                     So what do the players in the different postitions do?
                     </button>  
@@ -118,7 +118,7 @@
                                     <li> main receivers of the quaterbacks throws </li>
                                     <li> even though other players can catch the ball the wide recievers are the best at it! </li>
                                 </ul><br>
-                            <li> Flex player (running back or wide receiver): look above!</li>
+                            <li> Flex player (running back or wide receiver): look above!</li><br>
                             <li> Tight end: the best of both worlds</li>
                                 <ul>
                                     <li> blocks for both the quaterbacks and running backs</li>
@@ -138,5 +138,25 @@
                     </div>
                   </div>
         </div>
+        <script>
+            var acc = document.getElementsByClassName("accordian");
+            var i;
+
+            for(i=0; i<acc.length; i++){
+                acc[i].addEventListener("click", function() { 
+                    this.classList.toggle("active");
+                    this.parentElement.classList.toggle("active");
+
+                    var panel = this.getElementSibling;
+                    if(panel.style.display === "block"){
+                        panel.style.display = "none";
+                    }
+                    else  {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
     </body>
 </html>
