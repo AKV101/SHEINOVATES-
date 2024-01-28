@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DraftHelper</title>
+</head>
+<body>
+    <h1> Input Team Below: </h1>
+    <title>Football Positions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .position-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            width: 48%;
+            box-sizing: border-box;
+            margin-right: 2%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: calc(100% - 10px);
+            padding: 5px;
+        }
+
+        .calculate-button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="qb">Quarterback (QB):</label>
+            <input type="text" id="qb" name="qb">
+        </div>
+        <div class="column">
+            <label for="bench1">Bench Player 1:</label>
+            <input type="text" id="bench1" name="bench1">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="rb1">Running Back 1 (RB1):</label>
+            <input type="text" id="rb1" name="rb1">
+        </div>
+        <div class="column">
+            <label for="bench2">Bench Player 2:</label>
+            <input type="text" id="bench2" name="bench2">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="rb2">Running Back 2 (RB2):</label>
+            <input type="text" id="rb2" name="rb2">
+        </div>
+        <div class="column">
+            <label for="bench3">Bench Player 3:</label>
+            <input type="text" id="bench3" name="bench3">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="wr1">Wide Receiver 1 (WR1):</label>
+            <input type="text" id="wr1" name="wr1">
+        </div>
+        <div class="column">
+            <label for="bench4">Bench Player 4:</label>
+            <input type="text" id="bench4" name="bench4">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="wr2">Wide Receiver 2 (WR2):</label>
+            <input type="text" id="wr2" name="wr2">
+        </div>
+        <div class="column">
+            <label for="bench5">Bench Player 5:</label>
+            <input type="text" id="bench5" name="bench5">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="flex">Flex:</label>
+            <input type="text" id="flex" name="flex">
+        </div>
+        <div class="column">
+            <label for="bench6">Bench Player 6:</label>
+            <input type="text" id="bench6" name="bench6">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="te">Tight End (TE):</label>
+            <input type="text" id="te" name="te">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="defense">Defense:</label>
+            <input type="text" id="defense" name="defense">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="kicker">Kicker:</label>
+            <input type="text" id="kicker" name="kicker">
+        </div>
+    </div>
+
+    <div class="position-container">
+        <div class="column">
+            <label for="calculateButton">&nbsp;</label>
+            <button class="calculate-button" id="calculateButton" onclick="calculate()">Calculate</button>
+        </div>
+    </div>
+    <div class="column">
+        <label for="outputBox">Output:</label>
+        <div class="output-box" id="outputBox"></div>
+    </div>
+</div>
+
+    <script>
+        function calculate() {
+            // Add your calculation logic here
+            alert("Calculating...");
+            document.getElementById("outputBox").innerText = "Team Total Value is: " + "teamValue"; 
+
+        }
+    </script>
+
+</body>
+</html>
