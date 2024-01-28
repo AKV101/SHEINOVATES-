@@ -7,9 +7,12 @@ from requests import get
 app = Flask(__name__)
 
 @app.route('/')
-def tech():
-    return render_template('DraftHelper.html')
+def home():
+    return render_template('index(Tom).html')
 
+@app.route('/tech')
+def tech():
+    return render_template('FinalDraftHelper.html')
 
 
 # CSV files from https://github.com/MarcLinderGit/NFL_Stats

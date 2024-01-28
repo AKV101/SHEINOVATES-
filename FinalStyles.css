@@ -96,8 +96,7 @@ ul {
 
 .bg-img {
   /* The image used */
-  background-image: url("OBJ-Catch.jpg.crdownload");
-
+  background-image: url("OBJ-Catch.jpg");
   min-height: 800px;
 
   /* Center and scale the image nicely */

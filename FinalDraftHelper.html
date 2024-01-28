@@ -435,23 +435,48 @@ onclick="calculate()">Calculate</button>
 
 
 <script>
-
-function
-calculate() {
-
-// Add your calculation logic here
-
-alert("Calculating...");
-
-document.getElementById("outputBox").innerText
- = "Team Total Value is: " +
-"teamValue";
-
-
-
-}
-
-</script>
+    function calculate() {
+        alert("Calculating...");
+    
+        // Retrieve input values
+        var rb_name1 = document.getElementById("rb1").value;
+        var rb_name2 = document.getElementById("rb2").value;
+        var kick_name = document.getElementById("kicker").value;
+        var flex_name = document.getElementById("flex").value;
+        var def_name = document.getElementById("defense").value;
+        var qb_name = document.getElementById("qb").value;
+        var wr_name1 = document.getElementById("wr1").value;
+        var wr_name2 = document.getElementById("wr2").value;
+        var te_name = document.getElementById("te").value;
+    
+        // Send a POST request to the server with input data
+        fetch('/calculate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                rb1: rb_name1,
+                rb2: rb_name2,
+                kicker: kick_name,
+                flex: flex_name,
+                defense: def_name,
+                qb: qb_name,
+                wr1: wr_name1,
+                wr2: wr_name2,
+                te: te_name,
+            }),
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Update the outputBox with the result from the server
+            document.getElementById("outputBox").innerText = "Team Total Value is: " + data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
 
 
 
